@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,1206.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,3508</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Upload_FileTo_SharePoint_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -118,7 +118,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="In this workflow bot will try to upload the excel file to the desired sharepoint location" DisplayName="Download_Files_From_SharePoint" sap:VirtualizedContainerService.HintSize="552,1142" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="In this workflow bot will try to upload the excel file to the desired sharepoint location" DisplayName="Download_Files_From_SharePoint" sap:VirtualizedContainerService.HintSize="968.6666666666666,3443.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="umfm:O365DriveRemoteItem" Name="UploadedFile" />
       <Variable x:TypeArguments="x:String" Name="strLatestDownloadedFile" />
@@ -135,23 +135,23 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Download File Started" sap:VirtualizedContainerService.HintSize="490,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download_Files_From_SharePoint workflow started&quot;]" />
-    <TryCatch DisplayName="Try Catch - Download File" sap:VirtualizedContainerService.HintSize="490,631.3333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message - Download File Started" sap:VirtualizedContainerService.HintSize="906.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download_Files_From_SharePoint workflow started&quot;]" />
+    <TryCatch DisplayName="Try Catch - Download File" sap:VirtualizedContainerService.HintSize="906.6666666666666,2932.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Download_file_sharepoint" sap:VirtualizedContainerService.HintSize="868,2957.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence DisplayName="Download_file_sharepoint" sap:VirtualizedContainerService.HintSize="868,2693.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <umaf:UseDriveCard ApplicationId="{x:Null}" ContinueOnError="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="svc.uipath@tpicomposites.com" ConnectionId="d90ac85b-7750-471e-a26e-2d31f1423705" Connector="uipath-microsoft-onedrive" DisplayName="Use OneDrive &amp; SharePoint for moving file" sap:VirtualizedContainerService.HintSize="806,2846.6666666666665" sap2010:WorkflowViewState.IdRef="UseDriveCard_2" UseConnectionService="True">
+          <umaf:UseDriveCard ApplicationId="{x:Null}" ContinueOnError="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="svc.uipath@tpicomposites.com" ConnectionId="d90ac85b-7750-471e-a26e-2d31f1423705" Connector="uipath-microsoft-onedrive" DisplayName="Use OneDrive &amp; SharePoint for moving file" sap:VirtualizedContainerService.HintSize="806,2582.6666666666665" sap2010:WorkflowViewState.IdRef="UseDriveCard_2" UseConnectionService="True">
             <umaf:UseDriveCard.Body>
               <ActivityAction x:TypeArguments="umafc:IDriveMetadata">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="umafc:IDriveMetadata" Name="DriveLocation" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="772,2704.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="772,2440.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="URL_File" />
                     <Variable x:TypeArguments="s:String[]" Name="arrSplit" />
@@ -195,21 +195,20 @@
                       <InArgument x:TypeArguments="s:String[]">[in_config("str_sharepoint_Folders").ToString.Split(","c)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Folder in share Point" sap:VirtualizedContainerService.HintSize="710,1908" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrSplit]">
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Folder in share Point" sap:VirtualizedContainerService.HintSize="710,1644" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrSplit]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:String">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,1718" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,1454" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="634,92" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[String.Format(URL,currentItem.ToString)]" />
                           <umaf:GetItem ContinueOnError="{x:Null}" DriveName="{x:Null}" ItemFriendlyName="{x:Null}" ItemId="{x:Null}" SiteUrl="{x:Null}" AuthScopesInvalid="False" DisplayName="Get file or folder-Archive" DriveMetadata="[DriveLocation]" sap:VirtualizedContainerService.HintSize="634,170" sap2010:WorkflowViewState.IdRef="GetItem_1" Item="[Driveitem_Archive]" ItemSelectionMode="ItemUrl" ItemUrl="[String.Format(URL,currentItem.ToString)]" />
-                          <umaf:ForEachFileFolder Folder="{x:Null}" Query="{x:Null}" SharePointDocumentLibrary="{x:Null}" SharePointSiteUrl="{x:Null}" CurrentIndex="[intCurrentIndex]" DisplayName="For Each file or folder" DriveMetadata="[DriveLocation]" FilesRepository="SpecificUrl" sap:VirtualizedContainerService.HintSize="634,1288.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachFileFolder_1" IncludeSubfolders="False" ItemFriendlyName="V136 DSS" LimitToFirst="200" SpecificUrl="[String.Format(URL,currentItem.ToString)]" TrimDuplicates="False" UseSimpleApi="True" WhatToReturn="Files">
+                          <umaf:ForEachFileFolder Folder="{x:Null}" Query="{x:Null}" SharePointDocumentLibrary="{x:Null}" SharePointSiteUrl="{x:Null}" CurrentIndex="[intCurrentIndex]" DisplayName="For Each file or folder" DriveMetadata="[DriveLocation]" FilesRepository="SpecificUrl" sap:VirtualizedContainerService.HintSize="634,1156.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachFileFolder_1" IncludeSubfolders="False" ItemFriendlyName="V136 DSS" LimitToFirst="200" SpecificUrl="[String.Format(URL,currentItem.ToString)]" TrimDuplicates="False" UseSimpleApi="True" WhatToReturn="Files">
                             <umaf:ForEachFileFolder.Body>
                               <ActivityAction x:TypeArguments="mg:DriveItem, x:Int32">
                                 <ActivityAction.Argument1>
@@ -218,13 +217,12 @@
                                 <ActivityAction.Argument2>
                                   <DelegateInArgument x:TypeArguments="x:Int32" Name="DriveItemIndex" />
                                 </ActivityAction.Argument2>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,978" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,846" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <WriteLine DisplayName="Write Line File count is" sap:VirtualizedContainerService.HintSize="538,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;File Count is :-&quot;+(intCurrentIndex+1).ToString+&quot; and Download Time is:-&quot;+DateTime.Now.ToString(&quot;hh:mm:ss&quot;)]" />
                                   <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="538,735.3333333333334" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
                                     <ui:RetryScope.ActivityBody>
                                       <ActivityAction>
@@ -243,7 +241,7 @@
                                               <InArgument x:TypeArguments="x:String">[System.IO.Directory.GetFiles(strDownloadpath).[Select](Function(x) New FileInfo(x)).Where(Function(f) f.Extension.Equals(".xlsx")).OrderByDescending(Function(x) x.LastWriteTime).Take(1).ToArray()(0).ToString()]</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ui:LogMessage DisplayName="Log Message - Latest Downloaded File Path is" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Latest Downloaded File Path is : - &quot;+strLatestDownloadedFile.ToString]" />
+                                          <ui:LogMessage DisplayName="Log Message - Latest Downloaded File Path is" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Latest Downloaded File Path is : - &quot;+strLatestDownloadedFile.ToString]" />
                                         </Sequence>
                                       </ActivityAction>
                                     </ui:RetryScope.ActivityBody>
@@ -295,10 +293,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,458" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="872.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -319,6 +317,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message - Download File End" sap:VirtualizedContainerService.HintSize="490,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download_Files_From_SharePoint workflow end&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - Download File End" sap:VirtualizedContainerService.HintSize="906.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download_Files_From_SharePoint workflow end&quot;]" />
   </Sequence>
 </Activity>
