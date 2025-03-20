@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,2157.3333333333335" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,1015.3333333333335" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -99,7 +99,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="612.6666666666666,2092.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="614,950.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_Config" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtFinalCount" />
@@ -114,7 +114,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - RPA_CIM5935_DSS_Summary_Automation_Process" sap:VirtualizedContainerService.HintSize="550.6666666666666,1982" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - RPA_CIM5935_DSS_Summary_Automation_Process" sap:VirtualizedContainerService.HintSize="552,840" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,7 +122,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="512,1742.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="569.3333333333334,2230" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="str_Sharepoint_File_Url" />
           </Sequence.Variables>
@@ -132,8 +132,8 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start&quot;]" />
-          <Assign DisplayName="Assign - Process Start Time" sap:VirtualizedContainerService.HintSize="450,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+          <ui:LogMessage DisplayName="RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start" sap:VirtualizedContainerService.HintSize="507.3333333333333,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start&quot;]" />
+          <Assign DisplayName="Assign - Process Start Time" sap:VirtualizedContainerService.HintSize="507.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[str_Process_Start_time]</OutArgument>
             </Assign.To>
@@ -141,7 +141,7 @@
               <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Assign- Dictionary Assign" sap:VirtualizedContainerService.HintSize="450,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Assign- Dictionary Assign" sap:VirtualizedContainerService.HintSize="507.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dic_Config]</OutArgument>
             </Assign.To>
@@ -149,7 +149,7 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Init All Settings" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Init\InitAllSettings.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Init All Settings" sap:VirtualizedContainerService.HintSize="507.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\Init\InitAllSettings.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[dic_Config]</InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -160,76 +160,143 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
+          <Sequence DisplayName="Download Input files from sharepoint and Create DSS output with summary" sap:VirtualizedContainerService.HintSize="507.3333333333333,381.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DSS_Summary_Output.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\DSS_Summary_Output.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFinalCount">[dtFinalCount]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+          <Sequence DisplayName="Sharepoint upload - Summary and Raw FIle" sap:VirtualizedContainerService.HintSize="507.3333333333333,381.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+".xlsx"]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+"_RawData"+".xlsx"]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+          <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="507.3333333333333,226" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Send_Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Send_Email.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_To_Email">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_To_Email&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_CC_Email">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_CC_Email&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_Credentials">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SMTP_Credentials&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Sub">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Sub&quot;).ToString,Datetime.Now.ToString(&quot;MM-dd-yyyy hh:mm:ss&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Body">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Body&quot;).ToString,dtFinalCount.Rows.Count.ToString,dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString)" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionMessage">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Empty" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_PortNumber">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SMTP_PortNumber&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_Server">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SMTP_Server&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Attachment">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="string.Empty" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DeleteFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="507.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" Level="Info" LogEntry="No" UnSafe="False" WorkflowFileName="Process\DeleteFolder.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[dic_Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DSS_Summary_Output.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\DSS_Summary_Output.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
-              <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFinalCount">[dtFinalCount]</OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+".xlsx"]</InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+"_RawData"+".xlsx"]</InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
-              <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="507.3333333333333,80" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DataTable_To_HTML.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\DataTable_To_HTML.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_str_html_table">[str_html_table]</OutArgument>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[dic_Config]</InArgument>
-                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_input">[dtFinalCount]</InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Send_Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Send_Email.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_To_Email">[dic_Config("str_To_Email").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_CC_Email">[dic_Config("str_CC_Email").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_Credentials">[dic_Config("str_SMTP_Credentials").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_Sub">[String.Format(dic_Config("Str_Success_Email_Sub").ToString,Datetime.Now.ToString("MM-dd-yyyy hh:mm:ss"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_Body">[String.Format(dic_Config("Str_Success_Email_Body").ToString,str_html_table,dic_Config("str_SharePoint_Path").ToString)]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionMessage">[String.Empty]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_PortNumber">[dic_Config("str_SMTP_PortNumber").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_SMTP_Server">[dic_Config("str_SMTP_Server").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_Attachment">[string.Empty]</InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
+            <Assign DisplayName="Assign - Process End Time" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_Process_End_time]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign - Total time taken" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_total_timetaken]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[(Convert.ToDateTime(str_Process_End_time)-Convert.ToDateTime(str_Process_Start_time)).tostring]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - New item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="AddQueueItem_4" Priority="Normal" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" Reference="[&quot;DSS_SUmmary_Process_&quot;+DateTime.Now.ToString]">
+              <ui:AddQueueItem.ItemInformation>
+                <InArgument x:TypeArguments="x:String" x:Key="Process_Name">DSS_Summary_Process</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Process_Start_Time">[str_Process_Start_time]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Process_End_Time">[str_Process_End_time]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Total_Time_Taken">[str_total_timetaken]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Total_Project">[dtFinalCount.Rows.Count.ToString]</InArgument>
+              </ui:AddQueueItem.ItemInformation>
+            </ui:AddQueueItem>
+            <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item - Get pending item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItem_3" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" TransactionItem="[trans_current]" />
+            <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status - success status" ErrorType="Business" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_3" Status="Successful" TransactionItem="[trans_current]">
+              <ui:SetTransactionStatus.Analytics>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+              </ui:SetTransactionStatus.Analytics>
+              <ui:SetTransactionStatus.Output>
+                <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+              </ui:SetTransactionStatus.Output>
+            </ui:SetTransactionStatus>
           </Sequence>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DeleteFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" Level="Info" LogEntry="No" UnSafe="False" WorkflowFileName="Process\DeleteFolder.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[dic_Config]</InArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:LogMessage DisplayName="RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - End" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - End&quot;]" />
+          <ui:LogMessage DisplayName="RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - End" sap:VirtualizedContainerService.HintSize="507.3333333333333,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - End&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518,666.6666666666666" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -237,22 +304,22 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Exception" sap:VirtualizedContainerService.HintSize="450,476" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Exception" sap:VirtualizedContainerService.HintSize="512,596" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_17">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DeleteFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" Level="Info" LogEntry="No" UnSafe="False" WorkflowFileName="Process\DeleteFolder.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DeleteFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" Level="Info" LogEntry="No" UnSafe="False" WorkflowFileName="Process\DeleteFolder.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[dic_Config]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
@@ -266,8 +333,49 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:LogMessage DisplayName="Log Message - System Exception" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Bot stopped due to system Exception : - &quot;+exception.Message.ToString]" />
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Send_Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Send_Email.xaml">
+              <ui:LogMessage DisplayName="Log Message - System Exception" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Bot stopped due to system Exception : - &quot;+exception.Message.ToString]" />
+              <Sequence DisplayName="Add Queue Item - exception" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign DisplayName="Assign - Process End Time" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_Process_End_time]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="Assign - Total time taken" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_13">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_total_timetaken]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[(Convert.ToDateTime(str_Process_End_time)-Convert.ToDateTime(str_Process_Start_time)).tostring]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - New item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="AddQueueItem_5" Priority="Normal" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" Reference="[&quot;DSS_SUmmary_Process_&quot;+DateTime.Now.ToString]">
+                  <ui:AddQueueItem.ItemInformation>
+                    <InArgument x:TypeArguments="x:String" x:Key="Process_Name">DSS_Summary_Process</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Process_Start_Time">[str_Process_Start_time]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Process_End_Time">[str_Process_End_time]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Total_Time_Taken">[str_total_timetaken]</InArgument>
+                  </ui:AddQueueItem.ItemInformation>
+                </ui:AddQueueItem>
+                <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item - Get pending item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItem_4" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" TransactionItem="[trans_current]" />
+                <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status - Failed status" ErrorType="Business" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,249.33333333333334" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_4" Reason="[exception.Message.ToString]" Status="Failed" TransactionItem="[trans_current]">
+                  <ui:SetTransactionStatus.Analytics>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                  </ui:SetTransactionStatus.Analytics>
+                  <ui:SetTransactionStatus.Output>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                  </ui:SetTransactionStatus.Output>
+                </ui:SetTransactionStatus>
+              </Sequence>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Send_Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Process\Send_Email.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_str_To_Email">[dic_Config("str_CC_Email").ToString]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_str_CC_Email">[dic_Config("str_CC_Email").ToString]</InArgument>
@@ -284,48 +392,6 @@
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
-      <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="496,980.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_17">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign - Process End Time" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[str_Process_End_time]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString]</InArgument>
-            </Assign.Value>
-          </Assign>
-          <Assign DisplayName="Assign - Total time taken" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
-            <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[str_total_timetaken]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[(Convert.ToDateTime(str_Process_End_time)-Convert.ToDateTime(str_Process_Start_time)).tostring]</InArgument>
-            </Assign.Value>
-          </Assign>
-          <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item - New item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,198" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" Reference="[&quot;DSS_SUmmary_Process_&quot;+DateTime.Now.ToString]">
-            <ui:AddQueueItem.ItemInformation>
-              <InArgument x:TypeArguments="x:String" x:Key="Process_Name">DSS_Summary_Process</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Process_Start_Time">[str_Process_Start_time]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Process_End_Time">[str_Process_End_time]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Total_Time_Taken">[str_total_timetaken]</InArgument>
-            </ui:AddQueueItem.ItemInformation>
-          </ui:AddQueueItem>
-          <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item - Get pending item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" TransactionItem="[trans_current]" />
-          <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status - success status" ErrorType="Business" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="434,196.66666666666666" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_2" Status="Successful" TransactionItem="[trans_current]">
-            <ui:SetTransactionStatus.Analytics>
-              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-            </ui:SetTransactionStatus.Analytics>
-            <ui:SetTransactionStatus.Output>
-              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-            </ui:SetTransactionStatus.Output>
-          </ui:SetTransactionStatus>
-        </Sequence>
-      </TryCatch.Finally>
     </TryCatch>
   </Sequence>
 </Activity>
