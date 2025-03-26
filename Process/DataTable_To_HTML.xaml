@@ -173,7 +173,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[in_dt_input.ColumnCount=3]" sap:VirtualizedContainerService.HintSize="510,529.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[in_dt_input.ColumnCount=6]" sap:VirtualizedContainerService.HintSize="510,529.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="476,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -186,7 +186,7 @@
                             <OutArgument x:TypeArguments="x:String">[str_Middle]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[str_Middle+String.Format(in_Config("str_middle").ToString,CurrentRow(0).ToString,CurrentRow(1).ToString,CurrentRow(2).ToString)]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[str_Middle+String.Format(in_Config("str_middle").ToString,CurrentRow(0).ToString,CurrentRow(1).ToString,CurrentRow(2).ToString,CurrentRow(3).ToString,CurrentRow(4).ToString,CurrentRow(5).ToString)]</InArgument>
                           </Assign.Value>
                         </Assign>
                       </Sequence>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,3580.6666666666665" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,4067.333333333334" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -99,7 +99,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="670,3516" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="670,4002.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_Config" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtFinalCount" />
@@ -112,13 +112,17 @@
       <Variable x:TypeArguments="x:Int32" Name="int_BLRLFinalBladeCount" />
       <Variable x:TypeArguments="x:Int32" Name="int_RestofBLRLFinalBladeCount" />
       <Variable x:TypeArguments="x:Int32" Name="int_BLFinalBladeCount" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtFinalCount_All" />
+      <Variable x:TypeArguments="x:Int32" Name="int_BLRLFinalBladeDefectCount" />
+      <Variable x:TypeArguments="x:Int32" Name="int_BLFinalBladeDefectCount" />
+      <Variable x:TypeArguments="x:Int32" Name="int_RLFinalBladeDefectCount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - RPA_CIM5935_DSS_Summary_Automation_Process" sap:VirtualizedContainerService.HintSize="608,3405.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - RPA_CIM5935_DSS_Summary_Automation_Process" sap:VirtualizedContainerService.HintSize="608,3892" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:Int32" Name="int_RLFinalBladeCount" />
       </TryCatch.Variables>
@@ -129,7 +133,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="569.3333333333334,3166" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="RPA_CIM5935_DSS_Summary_Automation_Process - Main" sap:VirtualizedContainerService.HintSize="569.3333333333334,3652.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="str_Sharepoint_File_Url" />
           </Sequence.Variables>
@@ -172,13 +176,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <Sequence DisplayName="Download Input files from sharepoint and Create DSS output with summary" sap:VirtualizedContainerService.HintSize="507.3333333333333,381.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Download Input files from sharepoint and Create DSS output with summary" sap:VirtualizedContainerService.HintSize="507.3333333333333,481.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:BuildDataTable DataTable="[dtFinalCount_All]" DisplayName="Build Data Table - count for mail -ALL" sap:VirtualizedContainerService.HintSize="445.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_RL_Summary_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Total_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Total_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Total_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Total_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
@@ -203,6 +208,15 @@
                 </OutArgument>
                 <OutArgument x:TypeArguments="x:Int32" x:Key="Out_RLFinalBladeCount">
                   <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_RLFinalBladeCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_BLRLFinalBladeDefectCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_BLRLFinalBladeDefectCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_BLFinalBladeDefectCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_BLFinalBladeDefectCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_RLFinalBladeDefectCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_RLFinalBladeDefectCount" />
                 </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
@@ -242,13 +256,27 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="507.3333333333333,226" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="507.3333333333333,612.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{int_BLRLFinalBladeCount.ToString,int_BLRLFinalBladeDefectCount.ToString,int_BLFinalBladeCount.ToString,int_BLFinalBladeDefectCount.ToString,int_RLFInalBladeCount.ToString,int_RLFinalBladeDefectCount.ToString}]" DataTable="[dtFinalCount_All]" DisplayName="Add Data Row - Final Count" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DataTable_To_HTML.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="Process\DataTable_To_HTML.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_str_html_table">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_html_table" />
+                </OutArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                  <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="dic_Config" />
+                </InArgument>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_input">
+                  <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtFinalCount_All" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\Send_Email.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\Send_Email.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_To_Email">
@@ -264,7 +292,7 @@
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Sub&quot;).ToString,Datetime.Now.ToString(&quot;MM-dd-yyyy hh:mm:ss&quot;))" />
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_Body">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Body&quot;).ToString,dtFinalCount.Rows.Count.ToString,int_BLRLFinalBladeCount.ToString,int_BLFInalBladeCount.ToString,int_RLFInalBladeCount.ToString,dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString)" />
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Body&quot;).ToString,str_html_table,dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString)" />
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionMessage">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Empty" />
