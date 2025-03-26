@@ -2,11 +2,15 @@
   <x:Members>
     <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="out_dtFinalCount" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="Out_BLRLFinalBladeCount" Type="OutArgument(x:Int32)" />
+    <x:Property Name="Out_RestofBLRLFinalBladeCount" Type="OutArgument(x:Int32)" />
+    <x:Property Name="Out_BLFinalBladeCount" Type="OutArgument(x:Int32)" />
+    <x:Property Name="Out_RLFinalBladeCount" Type="OutArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,806.6666666666666</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1175.3333333333333,22581.333333333332</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Identify_Add_or_Remove_ComputerName_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,7 +139,7 @@
       <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DSS_Summary_Output - Main" sap:VirtualizedContainerService.HintSize="552,742" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="DSS_Summary_Output - Main" sap:VirtualizedContainerService.HintSize="1185.3333333333333,22516.666666666668" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFinalCount" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtFilterValue_BL_RL" />
@@ -187,7 +191,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="490,631.3333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1123.3333333333333,22406" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,33 +199,65 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="670.6666666666666,4545.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1084.6666666666667,22166.666666666668" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - DSS_Summary_Output-Start" sap:VirtualizedContainerService.HintSize="608.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;DSS_Summary_Output -Start&quot;]" />
-          <Sequence DisplayName="DSS Summary - Main " sap:VirtualizedContainerService.HintSize="608.6666666666666,3940" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <ui:LogMessage DisplayName="Log Message - DSS_Summary_Output-Start" sap:VirtualizedContainerService.HintSize="1022.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;DSS_Summary_Output -Start&quot;]" />
+          <Sequence DisplayName="DSS Summary - Main " sap:VirtualizedContainerService.HintSize="1022.6666666666666,21561.333333333332" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Create Datatables" sap:VirtualizedContainerService.HintSize="546.6666666666666,80" sap2010:WorkflowViewState.IdRef="Sequence_167">
+            <Sequence DisplayName="Create Datatables" sap:VirtualizedContainerService.HintSize="960.6666666666666,872" sap2010:WorkflowViewState.IdRef="Sequence_167">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:BuildDataTable DataTable="[dtFinalCount]" DisplayName="Build Data Table - Final count Each file " sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_RL_Summary_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_of_BL_RL_Summary_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <ui:BuildDataTable DataTable="[dtSummaryCount_BLRL]" DisplayName="Build Data Table - BL RL Summary" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_9" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Defect_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-              <ui:BuildDataTable DataTable="[dtSummaryCount_RestofBLRL]" DisplayName="Build Data Table - Rest of BL RL Summary" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_8" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_x0020_of_x0020_BL_x0026_RL_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_x0020_of_x0020_BL_x0026_RL_x0020_Defect_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020__x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020__x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_risk_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <ui:BuildDataTable DataTable="[dtFinalCount]" DisplayName="Build Data Table - Final count Each file " sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_RL_Summary_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_of_BL_RL_Summary_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <ui:BuildDataTable DataTable="[dtSummaryCount_BLRL]" DisplayName="Build Data Table - BL RL Summary" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_9" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Defect_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <ui:BuildDataTable DataTable="[dtSummaryCount_RestofBLRL]" DisplayName="Build Data Table - Rest of BL RL Summary" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_8" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Project_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_x0020_of_x0020_BL_x0026_RL_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rest_x0020_of_x0020_BL_x0026_RL_x0020_Defect_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020__x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020__x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High_x0020_Risk_x0020__x0028_fatigue_x0020_failure_x0020_mode_x0029__x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Medium_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_risk_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low_x0020_Risk_x0020_Potentially_x0020_Missed_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_60">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Out_BLRLFinalBladeCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_61">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Out_RestofBLRLFinalBladeCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_64">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Out_BLFinalBladeCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_65">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Out_RLFinalBladeCount]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
             </Sequence>
-            <Sequence DisplayName="Create Output Folder And File" sap:VirtualizedContainerService.HintSize="546.6666666666666,80" sap2010:WorkflowViewState.IdRef="Sequence_296">
+            <Sequence DisplayName="Create Output Folder And File" sap:VirtualizedContainerService.HintSize="960.6666666666666,80" sap2010:WorkflowViewState.IdRef="Sequence_296">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -480,15 +516,15 @@
               </ueab:SequenceX>
               <ui:LogMessage DisplayName="Log Message - Create Output Folder And File - End" sap:VirtualizedContainerService.HintSize="846,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Create Output Folder And File - End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="BL RL &amp; Rest of BL RL - Classic Activities" sap:VirtualizedContainerService.HintSize="546.6666666666666,80" sap2010:WorkflowViewState.IdRef="Sequence_80">
+            <Sequence DisplayName="BL RL &amp; Rest of BL RL - Classic Activities" sap:VirtualizedContainerService.HintSize="960.6666666666666,15108" sap2010:WorkflowViewState.IdRef="Sequence_80">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message - Main Flow -Start" sap:VirtualizedContainerService.HintSize="898.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Main Flow  -Start&quot;]" />
-              <ui:ForEachFileX DisplayName="For Each File in Folder - Input folder" Folder="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="898.6666666666666,13414" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="CreationDateOldFirst" SkipFolderWithoutPermission="False">
+              <ui:ForEachFileX DisplayName="For Each File in Folder - Input folder" Folder="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)]" sap:VirtualizedContainerService.HintSize="898.6666666666666,13915.333333333334" sap2010:WorkflowViewState.IdRef="ForEachFileX_3" IncludeSubDirectories="False" OrderBy="CreationDateOldFirst" SkipFolderWithoutPermission="False">
                 <ui:ForEachFileX.Body>
                   <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                     <ActivityAction.Argument1>
@@ -497,7 +533,7 @@
                     <ActivityAction.Argument2>
                       <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                     </ActivityAction.Argument2>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="864.6666666666666,13144" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="864.6666666666666,13645.333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <TryCatch.Variables>
                         <Variable x:TypeArguments="x:String" Name="str_BL_Missed" />
                         <Variable x:TypeArguments="x:String" Name="str_BL_Missed_Blade_Count" />
@@ -526,7 +562,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence DisplayName="Input Folder" sap:VirtualizedContainerService.HintSize="826,12904.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                        <Sequence DisplayName="Input Folder" sap:VirtualizedContainerService.HintSize="826,13406" sap2010:WorkflowViewState.IdRef="Sequence_79">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -534,13 +570,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message - Current File Name" sap:VirtualizedContainerService.HintSize="764,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Processing file Name is : -&quot;+CurrentFile.tostring]" />
-                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - BL RL &amp; Rest of BL RL" sap:VirtualizedContainerService.HintSize="764,12378" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[CurrentFile.ToString]">
+                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - BL RL &amp; Rest of BL RL" sap:VirtualizedContainerService.HintSize="764,12879.333333333334" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_14" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[CurrentFile.ToString]">
                             <ui:ExcelApplicationScope.Body>
                               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="730,12268" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="730,12769.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_70">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -610,7 +646,7 @@
                                     </ui:FilterDataTable.SelectColumns>
                                   </ui:FilterDataTable>
                                   <ui:LogMessage DisplayName="Log Message - Filter Count of BL RL" sap:VirtualizedContainerService.HintSize="668,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Filter Count of BL RL  is  : -&quot;+dtFilterValue_BL_RL.Rows.Count.ToString]" />
-                                  <If Condition="[dtFilterValue_BL_RL.rows.count&gt;0]" DisplayName="If - BL &amp; RL count &gt;0 " sap:VirtualizedContainerService.HintSize="668,4223.333333333333" sap2010:WorkflowViewState.IdRef="If_11">
+                                  <If Condition="[dtFilterValue_BL_RL.rows.count&gt;0]" DisplayName="If - BL &amp; RL count &gt;0 " sap:VirtualizedContainerService.HintSize="668,4599.333333333333" sap2010:WorkflowViewState.IdRef="If_11">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -618,19 +654,19 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="634,3958" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="634,4334" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Output file BL RL" sap:VirtualizedContainerService.HintSize="592,3870.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Output file BL RL" sap:VirtualizedContainerService.HintSize="592,4246.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                           <ui:ExcelApplicationScope.Body>
                                             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                               </ActivityAction.Argument>
-                                              <Sequence DisplayName="Do - BL RL" sap:VirtualizedContainerService.HintSize="558,3760.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                              <Sequence DisplayName="Do - BL RL" sap:VirtualizedContainerService.HintSize="558,4136.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -654,7 +690,15 @@
                                                     <InArgument x:TypeArguments="x:String">[dtFilterValue_BL_RL.DefaultView.ToTable(True,"Blade #").Rows.Count.ToString]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <Sequence DisplayName="Get Details for Summary Sheet - BL" sap:VirtualizedContainerService.HintSize="496,1500" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                                <Assign sap:VirtualizedContainerService.HintSize="496,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">[Out_BLRLFinalBladeCount]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">[Out_BLRLFinalBladeCount+CInt(str_BL_RL_Blade_Count)]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Sequence DisplayName="Get Details for Summary Sheet - BL" sap:VirtualizedContainerService.HintSize="496,1625.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_118">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="sd:DataTable" Name="dtFilterValue_BL_Missed" />
                                                   </Sequence.Variables>
@@ -697,6 +741,14 @@
                                                     </Assign.To>
                                                     <Assign.Value>
                                                       <InArgument x:TypeArguments="x:String">[dtFilterValue_BL.DefaultView.ToTable(True,"Blade #").Rows.Count.ToString]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_66">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[Out_BLFinalBladeCount]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[Out_BLFinalBladeCount+CInt(str_BL_Blade_Count)]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
                                                   <ui:FilterDataTable DataTable="[dtFilterValue_BL]" DisplayName="Filter Data Table - Missed Filter " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_25" OutputDataTable="[dtFilterValue_BL_Missed]" SelectColumnsMode="Remove">
@@ -823,7 +875,7 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:CommentOut>
                                                 </Sequence>
-                                                <Sequence DisplayName="Get Details for Summary Sheet - RL" sap:VirtualizedContainerService.HintSize="496,1731.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                                                <Sequence DisplayName="Get Details for Summary Sheet - RL" sap:VirtualizedContainerService.HintSize="496,1856.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_119">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="sd:DataTable" Name="dtFilterValue_RL_Missed" />
                                                     <Variable x:TypeArguments="x:String" Name="str_RL_Missed" />
@@ -870,6 +922,14 @@
                                                     </Assign.To>
                                                     <Assign.Value>
                                                       <InArgument x:TypeArguments="x:String">[dtFilterValue_RL.DefaultView.ToTable(True,"Blade #").Rows.Count.ToString]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_67">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[Out_RLFinalBladeCount]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[Out_RLFinalBladeCount+CInt(str_RL_Blade_Count)]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
                                                   <ui:FilterDataTable DataTable="[dtFilterValue_RL]" DisplayName="Filter Data Table - RL Missed FIlter " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_27" OutputDataTable="[dtFilterValue_RL_Missed]" SelectColumnsMode="Remove">
@@ -1070,14 +1130,6 @@
                                             <InArgument x:TypeArguments="x:String">["MX Observations"]</InArgument>
                                           </ui:FilterOperationArgument.Column>
                                           <ui:FilterOperationArgument.Operand>
-                                            <InArgument x:TypeArguments="x:String">["Detected"]</InArgument>
-                                          </ui:FilterOperationArgument.Operand>
-                                        </ui:FilterOperationArgument>
-                                        <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
-                                          <ui:FilterOperationArgument.Column>
-                                            <InArgument x:TypeArguments="x:String">["MX Observations"]</InArgument>
-                                          </ui:FilterOperationArgument.Column>
-                                          <ui:FilterOperationArgument.Operand>
                                             <InArgument x:TypeArguments="x:String">["Potentially Missed"]</InArgument>
                                           </ui:FilterOperationArgument.Operand>
                                         </ui:FilterOperationArgument>
@@ -1090,7 +1142,7 @@
                                     </ui:FilterDataTable.SelectColumns>
                                   </ui:FilterDataTable>
                                   <ui:LogMessage DisplayName="Log Message - Filter Count Rest of BL RL" sap:VirtualizedContainerService.HintSize="668,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Filter Count Rest of BL RL is  : -&quot;+dtFilterValue_Restof_BL_RL.Rows.Count.ToString]" />
-                                  <If Condition="[dtFilterValue_Restof_BL_RL.rows.count&gt;0]" DisplayName="If - Rest of BL &amp; RL count &gt;0 " sap:VirtualizedContainerService.HintSize="668,5682" sap2010:WorkflowViewState.IdRef="If_13">
+                                  <If Condition="[dtFilterValue_Restof_BL_RL.rows.count&gt;0]" DisplayName="If - Rest of BL &amp; RL count &gt;0 " sap:VirtualizedContainerService.HintSize="668,5807.333333333333" sap2010:WorkflowViewState.IdRef="If_13">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1098,19 +1150,19 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="634,5498" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="634,5623.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_87">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Output of Rest of BL RL" sap:VirtualizedContainerService.HintSize="592,5410.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Output of Rest of BL RL" sap:VirtualizedContainerService.HintSize="592,5536" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_15" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                           <ui:ExcelApplicationScope.Body>
                                             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                               <ActivityAction.Argument>
                                                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                               </ActivityAction.Argument>
-                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,5300.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,5426" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1131,6 +1183,14 @@
                                                   </Assign.To>
                                                   <Assign.Value>
                                                     <InArgument x:TypeArguments="x:String">[dtFilterValue_Restof_BL_RL.DefaultView.ToTable(True,"Blade #").Rows.Count.ToString]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Assign sap:VirtualizedContainerService.HintSize="496,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">[Out_RestofBLRLFinalBladeCount]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">[Out_RestofBLRLFinalBladeCount+CInt(str_Restof_BL_RL_Blade_Count)]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
                                                 <Sequence DisplayName="Get Details for Summary Sheet - High Risk (fatigue failure mode)" sap:VirtualizedContainerService.HintSize="496,1500" sap2010:WorkflowViewState.IdRef="Sequence_121">
@@ -1751,7 +1811,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Final Output count" sap:VirtualizedContainerService.HintSize="898.6666666666666,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Final Output count" sap:VirtualizedContainerService.HintSize="898.6666666666666,542" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
@@ -1788,7 +1848,7 @@
                 </ui:ExcelApplicationScope.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -1856,15 +1916,15 @@
               </ui:CommentOut>
               <ui:LogMessage DisplayName="Log Message - Main Flow -End" sap:VirtualizedContainerService.HintSize="898.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Main Flow -End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="Read and Enter Color codes based on Filters" sap:VirtualizedContainerService.HintSize="546.6666666666666,946.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_92">
+            <Sequence DisplayName="Read and Enter Color codes based on Filters" sap:VirtualizedContainerService.HintSize="960.6666666666666,2748" sap2010:WorkflowViewState.IdRef="Sequence_92">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -Start" sap:VirtualizedContainerService.HintSize="484.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -Start&quot;]" />
-              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="484.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -Start" sap:VirtualizedContainerService.HintSize="746.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -Start&quot;]" />
+              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[arrFilterValues]</OutArgument>
                 </Assign.To>
@@ -1872,13 +1932,13 @@
                   <InArgument x:TypeArguments="s:String[]">[in_config("str_FilterValue_RestofBLRL").ToString.Split(","c)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - Rest of BLRL" sap:VirtualizedContainerService.HintSize="484.6666666666667,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - Rest of BLRL" sap:VirtualizedContainerService.HintSize="746.6666666666666,1826.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="652,1676.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="712.6666666666666,1676.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_93">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1891,7 +1951,7 @@
                           </InArgument>
                         </ui:ExcelReadRange.Range>
                       </ui:ExcelReadRange>
-                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter Values - Rest of BL RL" sap:VirtualizedContainerService.HintSize="650.6666666666666,1676" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrFilterValues]">
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter Values - Rest of BL RL" sap:VirtualizedContainerService.HintSize="650.6666666666666,1466" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrFilterValues]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:String">
                             <ActivityAction.Argument>
@@ -2032,12 +2092,12 @@
                 </ui:ExcelApplicationScope.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="484.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[arrFilterValues]</OutArgument>
                 </Assign.To>
@@ -2045,7 +2105,7 @@
                   <InArgument x:TypeArguments="s:String[]">[in_config("str_FilterValue_BLRL").ToString.Split(","c)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="484.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[strPreviousFilterRange]</OutArgument>
                 </Assign.To>
@@ -2053,7 +2113,7 @@
                   <InArgument x:TypeArguments="x:Int32">1</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - BLRL" sap:VirtualizedContainerService.HintSize="484.6666666666667,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_23" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - BLRL" sap:VirtualizedContainerService.HintSize="746.6666666666666,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_23" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
@@ -2209,9 +2269,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -End" sap:VirtualizedContainerService.HintSize="484.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -End&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -End" sap:VirtualizedContainerService.HintSize="746.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="Summary Count valdation current file with old file - BL RL" sap:VirtualizedContainerService.HintSize="546.6666666666666,826" sap2010:WorkflowViewState.IdRef="Sequence_142">
+            <Sequence DisplayName="Summary Count valdation current file with old file - BL RL" sap:VirtualizedContainerService.HintSize="960.6666666666666,826" sap2010:WorkflowViewState.IdRef="Sequence_142">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dt_BL_RL_Summary_Count_Old_Validation" />
                 <Variable x:TypeArguments="sd1:Color" Name="BlackColor" />
@@ -2771,7 +2831,7 @@
               </ui:ExcelApplicationScope>
               <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - BL RL -End" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - BL RL-End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="Summary Count valdation current file with old file - Rest of BL RL" sap:VirtualizedContainerService.HintSize="546.6666666666666,951.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_171">
+            <Sequence DisplayName="Summary Count valdation current file with old file - Rest of BL RL" sap:VirtualizedContainerService.HintSize="960.6666666666666,951.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_171">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dt_BL_RL_Summary_Count_Old_Validation" />
                 <Variable x:TypeArguments="sd1:Color" Name="BlackColor" />
@@ -3502,7 +3562,7 @@
               </ui:ExcelApplicationScope>
               <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - Rest of BL RL -End" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - Rest of BL RL-End&quot;]" />
             </Sequence>
-            <ueab:SequenceX DisplayName="Single Excel Process Scope - Delete unwanted sheets and autofit sheets" sap:VirtualizedContainerService.HintSize="546.6666666666666,560" sap2010:WorkflowViewState.IdRef="SequenceX_2">
+            <ueab:SequenceX DisplayName="Single Excel Process Scope - Delete unwanted sheets and autofit sheets" sap:VirtualizedContainerService.HintSize="960.6666666666666,560" sap2010:WorkflowViewState.IdRef="SequenceX_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3571,7 +3631,7 @@
               </Sequence>
               <ui:LogMessage DisplayName="Log Message - Delete unwanted sheets and autofit sheets" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Delete unwanted sheets and autofit sheets - End&quot;]" />
             </ueab:SequenceX>
-            <ui:CommentOut DisplayName="BL RL Modern Activities " sap:VirtualizedContainerService.HintSize="546.6666666666666,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="BL RL Modern Activities " sap:VirtualizedContainerService.HintSize="960.6666666666666,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1032,5012.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_58">
                   <sap:WorkflowViewStateService.ViewState>
@@ -4044,7 +4104,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
           </Sequence>
-          <Assign sap:VirtualizedContainerService.HintSize="608.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_32">
+          <Assign sap:VirtualizedContainerService.HintSize="1022.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_32">
             <Assign.To>
               <OutArgument x:TypeArguments="sd:DataTable">[out_dtFinalCount]</OutArgument>
             </Assign.To>
@@ -4052,14 +4112,14 @@
               <InArgument x:TypeArguments="sd:DataTable">[dtFinalCount]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:LogMessage DisplayName="Log Message - DSS_Summary_Output- End" sap:VirtualizedContainerService.HintSize="608.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;DSS_Summary_Output - End&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - DSS_Summary_Output- End" sap:VirtualizedContainerService.HintSize="1022.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;DSS_Summary_Output - End&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,458" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1089.3333333333333,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -4067,7 +4127,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="450,387.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence sap:VirtualizedContainerService.HintSize="450,298" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

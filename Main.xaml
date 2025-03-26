@@ -109,6 +109,9 @@
       <Variable x:TypeArguments="x:String" Name="str_total_timetaken" />
       <Variable x:TypeArguments="ui:QueueItem" Name="trans_current" />
       <Variable x:TypeArguments="ui:QueueItem" Name="transaction_Item" />
+      <Variable x:TypeArguments="x:Int32" Name="int_BLRLFinalBladeCount" />
+      <Variable x:TypeArguments="x:Int32" Name="int_RestofBLRLFinalBladeCount" />
+      <Variable x:TypeArguments="x:Int32" Name="int_BLFinalBladeCount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -116,6 +119,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <TryCatch DisplayName="Try Catch - RPA_CIM5935_DSS_Summary_Automation_Process" sap:VirtualizedContainerService.HintSize="608,3405.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="int_RLFinalBladeCount" />
+      </TryCatch.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +140,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start" sap:VirtualizedContainerService.HintSize="507.3333333333333,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;RPA_Identify_Change_In_PSC A_Admin_Accounts_Groups - Start&quot;]" />
-          <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item - Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="507.3333333333333,197.33333333333334" sap2010:WorkflowViewState.IdRef="AddTransactionItem_1" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" Reference="[&quot;RPA_Identify_Discrepancy_between_NextDLPandEndpoint_&quot;+DateTime.Now.ToString]" TransactionItem="[transaction_Item]">
+          <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item - Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="507.3333333333333,197.33333333333334" sap2010:WorkflowViewState.IdRef="AddTransactionItem_1" QueueType="RPA_CIM5935_DSS_Summary_Automation_Process" Reference="[&quot;DSS_SUmmary_Process_&quot;+DateTime.Now.ToString]" TransactionItem="[transaction_Item]">
             <ui:AddTransactionItem.TransactionInformation>
               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
             </ui:AddTransactionItem.TransactionInformation>
@@ -170,6 +176,7 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
@@ -179,15 +186,32 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DSS_Summary_Output.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\DSS_Summary_Output.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
-                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFinalCount">[dtFinalCount]</OutArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">
+                  <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="dic_Config" />
+                </InArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFinalCount">
+                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtFinalCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_BLRLFinalBladeCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_BLRLFinalBladeCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_RestofBLRLFinalBladeCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_RestofBLRLFinalBladeCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_BLFinalBladeCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_BLFinalBladeCount" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="Out_RLFinalBladeCount">
+                  <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="int_RLFinalBladeCount" />
+                </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence DisplayName="Sharepoint upload - Summary and Raw FIle" sap:VirtualizedContainerService.HintSize="507.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Sharepoint upload - Summary and Raw FIle and Backup" sap:VirtualizedContainerService.HintSize="507.3333333333333,536.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
@@ -210,21 +234,11 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint_backup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+dic_config(&quot;str_File_Name_Final_Output&quot;).ToString+&quot;.xlsx&quot;" />
-                </InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">
-                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_Sharepoint_File_Url" />
-                </OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SharePoint_UploadPath_BackUp&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_TimeSpan&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(dic_Config(&quot;str_NoOf_Retries&quot;).ToString.Trim )" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+".xlsx"]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath_BackUp").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
@@ -250,7 +264,7 @@
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Sub&quot;).ToString,Datetime.Now.ToString(&quot;MM-dd-yyyy hh:mm:ss&quot;))" />
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_Body">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Body&quot;).ToString,dtFinalCount.Rows.Count.ToString,dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString)" />
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;Str_Success_Email_Body&quot;).ToString,dtFinalCount.Rows.Count.ToString,int_BLRLFinalBladeCount.ToString,int_BLFInalBladeCount.ToString,int_RLFInalBladeCount.ToString,dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString)" />
                 </InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionMessage">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Empty" />
