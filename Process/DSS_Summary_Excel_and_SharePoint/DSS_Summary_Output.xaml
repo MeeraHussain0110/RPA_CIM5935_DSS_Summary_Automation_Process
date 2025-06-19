@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1122.6666666666667,13172</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,9394</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Identify_Add_or_Remove_ComputerName_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -142,7 +142,7 @@
       <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DSS_Summary_Output - Main" sap:VirtualizedContainerService.HintSize="1132.6666666666667,13107.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="DSS_Summary_Output - Main" sap:VirtualizedContainerService.HintSize="1132.6666666666667,9329.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFinalCount" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtFilterValue_BL_RL" />
@@ -194,7 +194,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1070.6666666666667,12996.666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1070.6666666666667,9218.666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,7 +202,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1032,12757.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="DSS_Summary_Output" sap:VirtualizedContainerService.HintSize="1032,8979.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -210,7 +210,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message - DSS_Summary_Output-Start" sap:VirtualizedContainerService.HintSize="970,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;DSS_Summary_Output -Start&quot;]" />
-          <Sequence DisplayName="DSS Summary - Main " sap:VirtualizedContainerService.HintSize="970,12152" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <Sequence DisplayName="DSS Summary - Main " sap:VirtualizedContainerService.HintSize="970,8374" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -284,7 +284,7 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
-            <Sequence DisplayName="Create Output Folder And File" sap:VirtualizedContainerService.HintSize="908,6144" sap2010:WorkflowViewState.IdRef="Sequence_296">
+            <Sequence DisplayName="Create Output Folder And File" sap:VirtualizedContainerService.HintSize="908,5620" sap2010:WorkflowViewState.IdRef="Sequence_302">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -309,7 +309,7 @@
                   <InArgument x:TypeArguments="x:String">[System.IO.Directory.GetFiles(strDownloadpath).[Select](Function(x) New FileInfo(x)).Where(Function(f) f.Extension.Equals(".xlsx")).OrderByDescending(Function(x) x.LastWriteTime).Take(1).ToArray()(0).ToString()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <umaf:UseDriveCard ApplicationId="{x:Null}" ContinueOnError="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="svc.uipath@tpicomposites.com" ConnectionId="d90ac85b-7750-471e-a26e-2d31f1423705" Connector="uipath-microsoft-onedrive" DisplayName="Use OneDrive &amp; SharePoint for moving file" sap:VirtualizedContainerService.HintSize="846,549.3333333333334" sap2010:WorkflowViewState.IdRef="UseDriveCard_1" UseConnectionService="True">
+              <umaf:UseDriveCard ApplicationId="{x:Null}" ContinueOnError="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Account="Please select an account." ConnectionAccountName="svc.uipath@tpicomposites.com" ConnectionId="d90ac85b-7750-471e-a26e-2d31f1423705" Connector="uipath-microsoft-onedrive" DisplayName="Use OneDrive &amp; SharePoint for moving file" sap:VirtualizedContainerService.HintSize="846,25.333333333333332" sap2010:WorkflowViewState.IdRef="UseDriveCard_1" UseConnectionService="True">
                 <umaf:UseDriveCard.Body>
                   <ActivityAction x:TypeArguments="umafc:IDriveMetadata">
                     <ActivityAction.Argument>
@@ -333,7 +333,7 @@
                 </umaf:UseDriveCard.EmailAddress>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -368,13 +368,13 @@
                           <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet - Input file sheet Name" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_2" Index="0" Sheet="[strSheetName]" />
                           <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="626,25.333333333333332" sap2010:WorkflowViewState.IdRef="CommentOut_16">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_299">
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,788.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_299">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File - Create Output File" sap:VirtualizedContainerService.HintSize="388,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" ResizeWindow="None" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File - Create Output File" sap:VirtualizedContainerService.HintSize="484,678" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" ResizeWindow="None" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                   <ueab:ExcelApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                       <ActivityAction.Argument>
@@ -478,7 +478,7 @@
                                   </ueab:ExcelApplicationCard.Body>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -645,7 +645,7 @@
               </ueab:SequenceX>
               <ui:LogMessage DisplayName="Log Message - Create Output Folder And File - End" sap:VirtualizedContainerService.HintSize="846,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Create Output Folder And File - End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="BL RL &amp; Rest of BL RL - Classic Activities" sap:VirtualizedContainerService.HintSize="908,80" sap2010:WorkflowViewState.IdRef="Sequence_80">
+            <Sequence DisplayName="BL RL &amp; Rest of BL RL - Classic Activities" sap:VirtualizedContainerService.HintSize="908,80" sap2010:WorkflowViewState.IdRef="Sequence_303">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2069,15 +2069,15 @@
               </ui:CommentOut>
               <ui:LogMessage DisplayName="Log Message - Main Flow -End" sap:VirtualizedContainerService.HintSize="898.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Main Flow -End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="Read and Enter Color codes based on Filters" sap:VirtualizedContainerService.HintSize="908,4446" sap2010:WorkflowViewState.IdRef="Sequence_92">
+            <Sequence DisplayName="Read and Enter Color codes based on Filters" sap:VirtualizedContainerService.HintSize="908,80" sap2010:WorkflowViewState.IdRef="Sequence_92">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -Start" sap:VirtualizedContainerService.HintSize="746.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -Start&quot;]" />
-              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -Start" sap:VirtualizedContainerService.HintSize="668.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -Start&quot;]" />
+              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="668.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[arrFilterValues]</OutArgument>
                 </Assign.To>
@@ -2085,38 +2085,33 @@
                   <InArgument x:TypeArguments="s:String[]">[in_config("str_FilterValue_RestofBLRL").ToString.Split(","c)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - Rest of BLRL" sap:VirtualizedContainerService.HintSize="746.6666666666666,1786.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="668.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]" />
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - Rest of BLRL" sap:VirtualizedContainerService.HintSize="668.6666666666666,346" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_20" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString+&quot;.xlsx&quot;]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="712.6666666666666,1676.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,236" sap2010:WorkflowViewState.IdRef="Sequence_93">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_RestofBLRL_Summary]" DisplayName="Read Range Rest of BL RL" sap:VirtualizedContainerService.HintSize="650.6666666666666,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" SheetName="Rest of BL and RL">
-                        <ui:ExcelReadRange.Range>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:ExcelReadRange.Range>
-                      </ui:ExcelReadRange>
-                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter Values - Rest of BL RL" sap:VirtualizedContainerService.HintSize="650.6666666666666,1466" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrFilterValues]">
+                      <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_RestofBLRL_Summary]" DisplayName="Read Range Rest of BL RL" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A:AA" SheetName="Rest of BL and RL" />
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter Values - Rest of BL RL" sap:VirtualizedContainerService.HintSize="388,25.333333333333332" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrFilterValues]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:String">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="616.6666666666666,1276" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,1279.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_101">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:FilterDataTable DataTable="[dt_RestofBLRL_Summary]" DisplayName="Filter Data Table - Current Color value filter" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="574.6666666666666,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dtFilterValue_Restof_BL_RL]" SelectColumnsMode="Remove">
+                              <ui:FilterDataTable DataTable="[dt_RestofBLRL_Summary]" DisplayName="Filter Data Table - Current Color value filter" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="514,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dtFilterValue_Restof_BL_RL]" SelectColumnsMode="Remove">
                                 <ui:FilterDataTable.Filters>
                                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                     <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -2135,7 +2130,7 @@
                                   </scg:List>
                                 </ui:FilterDataTable.SelectColumns>
                               </ui:FilterDataTable>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Summary - Rest of BL RL" sap:VirtualizedContainerService.HintSize="574.6666666666666,308.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append Summary - Rest of BL RL" sap:VirtualizedContainerService.HintSize="514,308.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_18" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                 <ui:ExcelApplicationScope.Body>
                                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                     <ActivityAction.Argument>
@@ -2158,7 +2153,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ExcelApplicationScope>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Read last updated cell count" sap:VirtualizedContainerService.HintSize="574.6666666666666,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Read last updated cell count" sap:VirtualizedContainerService.HintSize="514,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_19" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                 <ui:ExcelApplicationScope.Body>
                                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                     <ActivityAction.Argument>
@@ -2187,14 +2182,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ExcelApplicationScope>
-                              <Switch x:TypeArguments="x:String" DisplayName="Switch Rest of BL RL" Expression="[dtFilterValue_Restof_BL_RL.Rows(0)(&quot;Outcome From Structural Tool &quot;).ToString]" sap:VirtualizedContainerService.HintSize="574.6666666666666,190" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch Rest of BL RL" Expression="[dtFilterValue_Restof_BL_RL.Rows(0)(&quot;Outcome From Structural Tool &quot;).ToString]" sap:VirtualizedContainerService.HintSize="514,193.33333333333334" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence x:Key="Low Risk" DisplayName="Low Risk" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                <Sequence x:Key="Low Risk" DisplayName="Low Risk" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2203,7 +2198,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelSetRangeColor Color="[system.Drawing.Color.FromArgb(255,0,176,80)]" DisplayName="Set Range Color - Green color" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_1" Range="[in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(strPreviousFilterRange+1).ToString+&quot;:&quot;+in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(dtTemp.Rows.count+1).Tostring]" SheetName="[in_Config(&quot;str_SheetName_Restof_BL&amp;RL&quot;).ToString]" />
                                 </Sequence>
-                                <Sequence x:Key="Medium Risk" DisplayName="Medium Risk" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                <Sequence x:Key="Medium Risk" DisplayName="Medium Risk" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2212,7 +2207,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelSetRangeColor Color="[system.Drawing.Color.FromArgb(255,255,255,0)]" DisplayName="Set Range Color - Yellow color" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_2" Range="[in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(strPreviousFilterRange+1).ToString+&quot;:&quot;+in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(dtTemp.Rows.count+1).Tostring]" SheetName="[in_Config(&quot;str_SheetName_Restof_BL&amp;RL&quot;).ToString]" />
                                 </Sequence>
-                                <Sequence x:Key="High Risk (fatigue failure mode)" DisplayName="High Risk" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                <Sequence x:Key="High Risk (fatigue failure mode)" DisplayName="High Risk" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2222,7 +2217,7 @@
                                   <ui:ExcelSetRangeColor Color="[system.Drawing.Color.FromArgb(255,153,51,0)]" DisplayName="Set Range Color - Brown Color" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_3" Range="[in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(strPreviousFilterRange+1).ToString+&quot;:&quot;+in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(dtTemp.Rows.count+1).Tostring]" SheetName="[in_Config(&quot;str_SheetName_Restof_BL&amp;RL&quot;).ToString]" />
                                 </Sequence>
                               </Switch>
-                              <Assign DisplayName="Assign - Previous filter range" sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign DisplayName="Assign - Previous filter range" sap:VirtualizedContainerService.HintSize="514,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[strPreviousFilterRange]</OutArgument>
                                 </Assign.To>
@@ -2235,7 +2230,7 @@
                         </ui:ForEach.Body>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -2250,7 +2245,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign DisplayName="Assign - Filter value split" sap:VirtualizedContainerService.HintSize="668.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[arrFilterValues]</OutArgument>
                 </Assign.To>
@@ -2258,7 +2253,7 @@
                   <InArgument x:TypeArguments="s:String[]">[in_config("str_FilterValue_BLRL").ToString.Split(","c)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="746.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign sap:VirtualizedContainerService.HintSize="668.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[strPreviousFilterRange]</OutArgument>
                 </Assign.To>
@@ -2266,38 +2261,32 @@
                   <InArgument x:TypeArguments="x:Int32">1</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - BLRL" sap:VirtualizedContainerService.HintSize="746.6666666666666,1763.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_23" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Fianal Summary with color code - BLRL" sap:VirtualizedContainerService.HintSize="668.6666666666666,1763.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_23" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="674.6666666666666,1653.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634.6666666666666,1653.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_113">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_RestofBLRL_Summary]" DisplayName="Read Range - BL RL" sap:VirtualizedContainerService.HintSize="612.6666666666666,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" SheetName="BL and RL">
-                        <ui:ExcelReadRange.Range>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:ExcelReadRange.Range>
-                      </ui:ExcelReadRange>
-                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter value BL RL" sap:VirtualizedContainerService.HintSize="612.6666666666666,1442.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrFilterValues]">
+                      <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_RestofBLRL_Summary]" DisplayName="Read Range - BL RL" sap:VirtualizedContainerService.HintSize="572.6666666666666,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" Range="A:AA" SheetName="BL and RL" />
+                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Filter value BL RL" sap:VirtualizedContainerService.HintSize="572.6666666666666,1442.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[arrFilterValues]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:String">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="578.6666666666666,1252.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="538.6666666666666,1252.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_112">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:FilterDataTable DataTable="[dt_RestofBLRL_Summary]" DisplayName="Filter Data Table - Filter BL RL" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="536.6666666666666,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtFilterValue_BL_RL]" SelectColumnsMode="Remove">
+                              <ui:FilterDataTable DataTable="[dt_RestofBLRL_Summary]" DisplayName="Filter Data Table - Filter BL RL" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="496.6666666666667,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[dtFilterValue_BL_RL]" SelectColumnsMode="Remove">
                                 <ui:FilterDataTable.Filters>
                                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                     <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -2316,7 +2305,7 @@
                                   </scg:List>
                                 </ui:FilterDataTable.SelectColumns>
                               </ui:FilterDataTable>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append final summary - BL RL" sap:VirtualizedContainerService.HintSize="536.6666666666666,308.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_21" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Append final summary - BL RL" sap:VirtualizedContainerService.HintSize="496.6666666666667,308.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_21" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                 <ui:ExcelApplicationScope.Body>
                                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                     <ActivityAction.Argument>
@@ -2339,7 +2328,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ExcelApplicationScope>
-                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Read last updated cell count" sap:VirtualizedContainerService.HintSize="536.6666666666666,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_22" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Read last updated cell count" sap:VirtualizedContainerService.HintSize="496.6666666666667,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_22" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                                 <ui:ExcelApplicationScope.Body>
                                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                     <ActivityAction.Argument>
@@ -2368,14 +2357,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ExcelApplicationScope>
-                              <Switch x:TypeArguments="x:String" DisplayName="Switch BL RL" Expression="[dtFilterValue_BL_RL.Rows(0)(&quot;Outcome From Structural Tool &quot;).ToString]" sap:VirtualizedContainerService.HintSize="536.6666666666666,166.66666666666666" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch BL RL" Expression="[dtFilterValue_BL_RL.Rows(0)(&quot;Outcome From Structural Tool &quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.6666666666667,166.66666666666666" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence x:Key="Blades Black List" DisplayName="Blades Black List" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                <Sequence x:Key="Blades Black List" DisplayName="Blades Black List" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_110">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2384,7 +2373,7 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelSetRangeColor Color="[system.Drawing.Color.FromArgb(85,85,85)]" DisplayName="Set Range Color - Grey color" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_7" Range="[in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(strPreviousFilterRange+1).ToString+&quot;:&quot;+in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(dtTemp.Rows.count+1).Tostring]" SheetName="[in_Config(&quot;str_SheetName_BL&amp;RL&quot;).ToString]" />
                                 </Sequence>
-                                <Sequence x:Key="High Risk (extreme failure mode)" DisplayName="High Risk (extreme failure mode)" sap:VirtualizedContainerService.HintSize="450,282" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                                <Sequence x:Key="High Risk (extreme failure mode)" DisplayName="High Risk (extreme failure mode)" sap:VirtualizedContainerService.HintSize="450,302" sap2010:WorkflowViewState.IdRef="Sequence_111">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2394,7 +2383,7 @@
                                   <ui:ExcelSetRangeColor Color="[system.Drawing.Color.FromArgb(255,255,0,0)]" DisplayName="Set Range Color - Red color" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="ExcelSetRangeColor_8" Range="[in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(strPreviousFilterRange+1).ToString+&quot;:&quot;+in_config(&quot;str_Color_Col_CellPosition&quot;).ToString+(dtTemp.Rows.count+1).Tostring]" SheetName="[in_Config(&quot;str_SheetName_BL&amp;RL&quot;).ToString]" />
                                 </Sequence>
                               </Switch>
-                              <Assign DisplayName="Assign - previous filter range" sap:VirtualizedContainerService.HintSize="536.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign DisplayName="Assign - previous filter range" sap:VirtualizedContainerService.HintSize="496.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[strPreviousFilterRange]</OutArgument>
                                 </Assign.To>
@@ -2422,9 +2411,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -End" sap:VirtualizedContainerService.HintSize="746.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -End&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - Read and Enter Color codes based on Filters -End" sap:VirtualizedContainerService.HintSize="668.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Read and Enter Color codes based on Filters -End&quot;]" />
             </Sequence>
-            <Sequence DisplayName="Summary Count valdation current file with old file - BL RL" sap:VirtualizedContainerService.HintSize="908,826" sap2010:WorkflowViewState.IdRef="Sequence_142">
+            <Sequence DisplayName="Summary Count valdation current file with old file - BL RL" sap:VirtualizedContainerService.HintSize="908,1938" sap2010:WorkflowViewState.IdRef="Sequence_142">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="dt_BL_RL_Summary_Count_Old_Validation" />
                 <Variable x:TypeArguments="sd1:Color" Name="BlackColor" />
@@ -2440,8 +2429,8 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - BL RL -Start" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - BL RL-Start&quot;]" />
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Summary New" sap:VirtualizedContainerService.HintSize="484,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_28" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - BL RL -Start" sap:VirtualizedContainerService.HintSize="606,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - BL RL-Start&quot;]" />
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Summary New" sap:VirtualizedContainerService.HintSize="606,280.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_28" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
@@ -2470,7 +2459,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Summary OLD" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_27" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Summary OLD" sap:VirtualizedContainerService.HintSize="606,1137.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_27" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[string.Format(in_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+in_config(&quot;str_File_Name_Final_Output&quot;).ToString]">
                 <ui:ExcelApplicationScope.Body>
                   <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                     <ActivityAction.Argument>
@@ -2977,12 +2966,12 @@
                 </ui:ExcelApplicationScope.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - BL RL -End" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - BL RL-End&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - Summary Count valdation current file with old file - BL RL -End" sap:VirtualizedContainerService.HintSize="606,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Summary Count valdation current file with old file - BL RL-End&quot;]" />
             </Sequence>
             <Sequence DisplayName="Summary Count valdation current file with old file - Rest of BL RL" sap:VirtualizedContainerService.HintSize="908,80" sap2010:WorkflowViewState.IdRef="Sequence_171">
               <Sequence.Variables>

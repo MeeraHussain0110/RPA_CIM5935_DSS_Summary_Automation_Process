@@ -149,7 +149,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
             </ui:AddTransactionItem.TransactionInformation>
           </ui:AddTransactionItem>
-          <Assign DisplayName="Assign - Process Start Time" sap:VirtualizedContainerService.HintSize="450,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+          <Assign DisplayName="Assign - Process Start Time" sap:VirtualizedContainerService.HintSize="507.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[str_Process_Start_time]</OutArgument>
             </Assign.To>
@@ -184,7 +184,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:BuildDataTable DataTable="[dtFinalCount_All]" DisplayName="Build Data Table - count for mail -ALL" sap:VirtualizedContainerService.HintSize="445.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Total_x0020_Blade_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0026_RL_x0020_Total_x0020_Defect_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Total_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BL_x0020_Total_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Total_x0020_Blade_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RL_x0020_Total_x0020_Defect_x0020_count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Download_Files_From_SharePoint.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[dic_Config]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
@@ -212,40 +212,20 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+dic_config(&quot;str_File_Name_Final_Output&quot;).ToString+&quot;.xlsx&quot;" />
-                </InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">
-                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_Sharepoint_File_Url" />
-                </OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_TimeSpan&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(dic_Config(&quot;str_NoOf_Retries&quot;).ToString.Trim )" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Final_Output").ToString+".xlsx"]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(dic_Config(&quot;str_Download_File_Path&quot;).ToString,Environment.UserName)+&quot;\&quot;+DateTime.Now.ToString(&quot;ddMMyyyy&quot;)+&quot;\Final_Output\&quot;+dic_config(&quot;str_File_Name_Compiled_Output&quot;).ToString+&quot;.xlsx&quot;" />
-                </InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">
-                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_Sharepoint_File_Url" />
-                </OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_SharePoint_UploadPath&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_Config(&quot;str_TimeSpan&quot;).ToString.Trim" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(dic_Config(&quot;str_NoOf_Retries&quot;).ToString.Trim )" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_FilePath">[String.Format(dic_Config("str_Download_File_Path").ToString,Environment.UserName)+"\"+DateTime.Now.ToString("ddMMyyyy")+"\Final_Output\"+dic_config("str_File_Name_Compiled_Output").ToString+".xlsx"]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_Sharepoint_File_url">[str_Sharepoint_File_Url]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_SharePoint_folder_url">[dic_Config("str_SharePoint_UploadPath").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_RetryInterval_TS">[dic_Config("str_TimeSpan").ToString.Trim]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_int_RetryCount">[CInt(dic_Config("str_NoOf_Retries").ToString.Trim )]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Upload_FileTo_SharePoint_backup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Process\DSS_Summary_Excel_and_SharePoint\Upload_FileTo_SharePoint.xaml">
